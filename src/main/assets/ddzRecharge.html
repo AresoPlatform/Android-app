@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function transfer(contractAddress,toAddress,amount,privateKey,memo,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var parameter1 = [{type:'address',value:toAddress},{type:'uint256',value:amount}];
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"transfer(address,uint256)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            if(memo.length == 0){
+                var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            }else{
+                var updateTransaction = await tronWeb.transactionBuilder.addUpdateData(transaction.transaction, memo, 'utf8');
+                var signedtxn = await tronWeb.trx.sign(updateTransaction, privateKey);
+            }
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.transferFunction(result.txid);
+        }catch(e){
+            stub.transferFunction("错误："+e.message);
+        }
+    }
+
+
+</script>
+</html>

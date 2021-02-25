@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<script>
+    async function stake(privateKey,lpExchangeAddress,lpPoolAddress,approveValue,amount,isApprove,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            if(isApprove){
+                var parameter1 = [{type:'address',value:lpPoolAddress},{type:'uint256',value:approveValue}];
+                var transaction = await tronWeb.transactionBuilder.triggerSmartContract(lpExchangeAddress,"approve(address,uint256)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+                var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+                var approveResult = await tronWeb.trx.sendRawTransaction(signedtxn);
+            }
+            var poolContract = await tronWeb.contract().at(lpPoolAddress);
+            var result = await poolContract.stake(amount).send({feeLimit:40000000});
+            stub.stakeFunction(result);
+        }catch(e){
+            stub.stakeFunction("错误："+e.message);
+        }
+    }
+</script>
+<body></body>
+</html>

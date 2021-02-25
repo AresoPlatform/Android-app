@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_7"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dp_12"
+        app:hl_leftShow="false"
+        app:hl_rightShow="false"
+        app:hl_shadowColor="@color/bg_color_shadow"
+        app:hl_shadowLimit="@dimen/dp_10"
+        app:hl_topShow="false">
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout_an_audit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_m_10"
+                android:layout_below="@id/mShadowLayout_top">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_60"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="阿希基金重磅奖励来袭"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_bg_black"
+                    app:typeface="heavy"
+                    />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:text="待审核"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_color_red"
+                    app:typeface="heavy"
+                    />
+
+            </RelativeLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/mShadowLayout_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <com.xw.aschwitkey.view.UpRoundImageView
+                    android:id="@+id/mImageView_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_133"
+                    android:scaleType="fitXY"
+                    app:radius="@dimen/dp_12" />
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

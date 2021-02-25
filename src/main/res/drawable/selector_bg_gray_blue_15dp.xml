@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/text_bg" />
+            <!-- android:radius 圆角的半径 -->
+            <corners android:radius="@dimen/dp_15" />
+
+        </shape>
+    </item>
+
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/bg_color_ed" />
+            <!-- android:radius 圆角的半径 -->
+            <corners android:radius="@dimen/dp_15" />
+
+            <stroke android:width="@dimen/dp_0_5" android:color="@color/white1" />
+        </shape>
+    </item>
+
+</selector>

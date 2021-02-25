@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function reward(privateKey,contractAddress,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var contract = await tronWeb.contract().at(contractAddress);
+            var result = await contract.takeGain().send({feeLimit:40000000});
+            stub.startFunction(result);
+        }catch(e){
+            stub.startFunction("错误："+e.message);
+        }
+    }
+
+</script>
+</html>

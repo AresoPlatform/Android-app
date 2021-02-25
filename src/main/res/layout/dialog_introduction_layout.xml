@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white_radius"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/shape_background_top_12dp"
+            android:gravity="center"
+            android:text="希客论坛规则"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_17"
+            app:typeface="heavy" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/white1" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_360">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:layout_marginRight="@dimen/dp_17"
+                android:orientation="vertical">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_17"
+                    android:text="论坛规则："
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/dp_16"
+                    app:typeface="heavy" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:textSize="@dimen/sp_14"
+                    app:typeface="regular" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_17"
+                    android:text="论坛禁止发布："
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/dp_16"
+                    app:typeface="heavy" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:layout_marginBottom="@dimen/dp_17"
+                    android:textSize="@dimen/sp_14"
+                    app:typeface="regular" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_17"
+                    android:layout_gravity="center_horizontal"
+                    android:text="本规则一切解释权归希客app所有"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_color_red"
+                    app:typeface="regular"
+                    />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/white1" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_close"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/shape_background_bottom_12dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="20秒 后 即可关闭"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_13"
+                android:paddingRight="@dimen/dp_13">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_goAsch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@mipmap/asch_jiantou" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="进入ASCH"
+                                    android:textColor="@color/main1"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="medium" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="@dimen/dp_0_5"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/dp_7"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_marginBottom="@dimen/dp_7"
+                            android:background="@color/white1"/>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_web_aso"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="前往Areso官网"
+                            android:textColor="@color/main1"
+                            android:textSize="@dimen/sp_13"
+                            app:typeface="medium" />
+
+                        <TextView
+                            android:layout_width="@dimen/dp_0_5"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_marginBottom="@dimen/dp_7"
+                            android:background="@color/white1"/>
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_goTron"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="进入TRON"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="medium" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@mipmap/tron_jiantou" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"
+                        android:background="@mipmap/wallet_ap">
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginTop="@dimen/dp_13"
+                                android:text="AP挖矿"
+                                android:textColor="#ccffffff"
+                                android:textSize="@dimen/sp_17"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_btn_getAp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_marginRight="@dimen/dp_m_1"
+                                android:paddingLeft="@dimen/dp_10"
+                                android:paddingRight="@dimen/dp_10"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:background="@drawable/selector_button_white_switch"
+                                android:gravity="center"
+                                android:text="获取AP凭证"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="medium" />
+
+                        </RelativeLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mRelativeLayout_top"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:text="·AP是锁仓XAS，用于挖矿的凭证"
+                            android:textColor="#ccffffff"
+                            android:textSize="@dimen/sp_12"
+                            app:typeface="medium" />
+
+                        <LinearLayout
+                            android:id="@+id/mLinearLayout_ap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_marginBottom="@dimen/dp_17"
+                            android:orientation="horizontal">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_apMessage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_gravity="bottom"
+                                android:text="您有可挖矿AP："
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_ap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:visibility="gone"
+                                android:text="？ AP"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_24"
+                                app:typeface="impact" />
+
+                        </LinearLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_ap_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_marginBottom="@dimen/dp_17"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="heavy" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"
+                        android:background="@mipmap/wallet_lp">
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_lp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginTop="@dimen/dp_13"
+                                android:text="LP挖矿"
+                                android:textColor="#ccffffff"
+                                android:textSize="@dimen/sp_17"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_btn_getLp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_m_1"
+                                android:background="@drawable/selector_button_white_switch"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/dp_10"
+                                android:paddingRight="@dimen/dp_10"
+                                android:text="流动性LP操作"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="medium" />
+
+                        </RelativeLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mRelativeLayout_lp"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:text="·LP是提供TRX和ASO交易对流动性所产生的流动性凭证"
+                            android:textColor="#ccffffff"
+                            android:textSize="@dimen/sp_12"
+                            app:typeface="medium" />
+
+                        <LinearLayout
+                            android:id="@+id/mLinearLayout_lp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_marginBottom="@dimen/dp_17"
+                            android:orientation="horizontal">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_lpMessage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_gravity="bottom"
+                                android:text="您有可挖矿LP："
+                                android:textColor="@color/text_color_blue"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_lp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:text="？ LP"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_24"
+                                android:visibility="gone"
+                                app:typeface="impact" />
+
+                        </LinearLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_lp_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_marginBottom="@dimen/dp_17"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="heavy" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_95"
+                    android:layout_marginTop="@dimen/dp_3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_btn_green_12dp"
+                        android:layout_below="@id/mShadowLayout_top"
+                        android:layout_marginTop="@dimen/dp_m_30"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_65"
+                            android:paddingTop="@dimen/dp_18"
+                            android:layout_weight="1">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_btn_pledge_mining"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="AP挖矿"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="heavy" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/mLottieAnimationView_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_45"
+                                android:layout_gravity="center" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_65"
+                            android:paddingTop="@dimen/dp_18"
+                            android:layout_weight="1">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_btn_mobility_mining"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="LP挖矿"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="heavy" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/mLottieAnimationView_click_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_45"
+                                android:layout_gravity="center" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <com.lihang.ShadowLayout
+                        android:id="@+id/mShadowLayout_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hl_cornerRadius="@dimen/dp_12"
+                        app:hl_leftShow="false"
+                        app:hl_rightShow="false"
+                        app:hl_shadowColor="@color/bg_color_shadow"
+                        app:hl_shadowLimit="@dimen/dp_10"
+                        app:hl_topShow="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/mLinearLayout_pledged"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_pledged"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="已质押(AP)"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/dp_0_5"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dp_13"
+                                android:layout_marginBottom="@dimen/dp_13"
+                                android:background="@color/TextColor6" />
+
+                            <LinearLayout
+                                android:id="@+id/mLinearLayout_pledged_lp"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_pledged_lp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="？"
+                                    android:textColor="@color/text_color_blue"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="已质押(LP)"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.lihang.ShadowLayout>
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0_5"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dp_7"
+                        android:background="@color/white1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mRelativeLayout_mining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_65"
+                        android:layout_below="@id/mLinearLayout_top"
+                        android:layout_marginTop="@dimen/dp_m_20"
+                        android:background="@drawable/selector_btn_green_12dp"
+                        android:paddingTop="@dimen/dp_18">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_btn_reward"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="\? ASO 待领取"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="heavy" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/mLottieAnimationView_click_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mLinearLayout_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:background="@drawable/shape_white_radius_stroke_12dp"
+                            android:paddingLeft="@dimen/dp_13"
+                            android:paddingRight="@dimen/dp_13"
+                            android:visibility="gone">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="总收益"
+                                android:textColor="@color/main4"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_allReward"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="0.000 ASO"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                        </RelativeLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_white_radius_stroke_12dp_top"
+                                android:paddingLeft="@dimen/dp_13"
+                                android:paddingRight="@dimen/dp_13">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_mining"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="待挖矿（AP挖矿）"
+                                    android:textColor="@color/main4"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="heavy" />
+
+                            </RelativeLayout>
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/mLottieAnimationView_mining"
+                                android:layout_width="@dimen/dp_200"
+                                android:layout_height="@dimen/dp_60"
+                                android:layout_gravity="right" />
+                        </FrameLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_receive"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_m_1"
+                            android:background="@drawable/shape_white_radius_stroke_12dp_bottom"
+                            android:paddingLeft="@dimen/dp_13"
+                            android:paddingRight="@dimen/dp_13">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="已收矿（点击查看）"
+                                android:textColor="@color/main4"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_reward"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="0.000 ASO"
+                                android:textColor="@color/text_color_green2"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/mRelativeLayout_mining_lp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_65"
+                        android:layout_below="@id/mLinearLayout_top_lp"
+                        android:layout_marginTop="@dimen/dp_m_20"
+                        android:background="@drawable/selector_btn_green_12dp"
+                        android:paddingTop="@dimen/dp_18">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_btn_reward_lp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="\? ASO 待领取"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="heavy" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/mLottieAnimationView_click_bottom_lp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mLinearLayout_top_lp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_white_radius_stroke_12dp_top"
+                                android:paddingLeft="@dimen/dp_13"
+                                android:paddingRight="@dimen/dp_13">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_mining_lp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="待挖矿（LP挖矿）"
+                                    android:textColor="@color/main4"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="heavy" />
+
+                            </RelativeLayout>
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/mLottieAnimationView_mining_lp"
+                                android:layout_width="@dimen/dp_200"
+                                android:layout_height="@dimen/dp_60"
+                                android:layout_gravity="right" />
+                        </FrameLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_receive_lp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_m_1"
+                            android:background="@drawable/shape_white_radius_stroke_12dp_bottom"
+                            android:paddingLeft="@dimen/dp_13"
+                            android:paddingRight="@dimen/dp_13">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="已收矿（点击查看）"
+                                android:textColor="@color/main4"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_reward_lp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="0.000 ASO"
+                                android:textColor="@color/text_color_green2"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:layout_marginBottom="@dimen/dp_13"
+                    android:background="@drawable/shape_white_radius_stroke_12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_startRewardBlock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="？"
+                            android:textColor="@color/text_bg_gray"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="impact" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="开始产矿区块"
+                            android:textColor="@color/text_bg_gray"
+                            android:textSize="@dimen/sp_12"
+                            app:typeface="regular" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0_5"
+                        android:layout_height="match_parent"
+                        android:background="@color/white1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_getRewardsPerBlock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="？"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="AP矿池每区块产量"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/white1"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_getRewardsPerBlock_lp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="？"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="LP矿池每区块产量"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

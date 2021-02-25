@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_dialog_background_white_top"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftBottom="0dp"
+            app:hl_cornerRadius_leftTop="@dimen/dp_24"
+            app:hl_cornerRadius_rightBottom="0dp"
+            app:hl_cornerRadius_rigthTop="@dimen/dp_24"
+            app:hl_leftShow="false"
+            app:hl_rightShow="false"
+            app:hl_shadowColor="@color/bg_color_shadow"
+            app:hl_shadowLimit="@dimen/dp_10"
+            app:hl_topShow="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:text="ASO娱乐充值"
+                    android:textColor="@color/text_bg_black"
+                    android:textSize="@dimen/sp_15"
+                    app:typeface="heavy" />
+
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_from_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="转出账户"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_from"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_from_text"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12"
+                app:typeface="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="接收账户"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_to"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_address"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12"
+                app:typeface="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout_selectToken"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:visibility="gone">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_selectToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="选择通证"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <Spinner
+                android:id="@+id/mSpinner_token"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dp_17"
+                android:layout_toRightOf="@id/mTextView_selectToken" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_nowGold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="当前金币数量"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_nowGold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_nowGold_text"
+                android:background="@null"
+                android:text="0"
+                android:gravity="right|center_vertical"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12"
+                app:typeface="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="充值金额(ASO)"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceEditText
+                android:id="@+id/mEditText_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_amount"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:inputType="number"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_13"
+                app:face="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_gold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="预计到账金币"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_gold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_gold_text"
+                android:background="@null"
+                android:text="0"
+                android:gravity="right|center_vertical"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12"
+                app:typeface="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:visibility="gone">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="转账备注"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceEditText
+                android:id="@+id/mEditText_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_message"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:maxLength="200"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_13"
+                app:face="heavy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="交易密码"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceEditText
+                android:id="@+id/mEditText_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mTextView_password"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:inputType="textPassword"
+                android:maxLength="6"
+                android:minWidth="@dimen/dp_50"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_13"
+                app:face="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_net_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="预计消耗带宽"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="≈ 0"
+                android:textColor="@color/text_bg_gray"
+                android:textSize="@dimen/sp_13"
+                app:typeface="impact" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_energy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="预计消耗能量"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="≈ 0"
+                android:textColor="@color/text_bg_gray"
+                android:textSize="@dimen/sp_13"
+                app:typeface="impact" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_17"
+            android:orientation="horizontal">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_weight="0.3"
+                android:background="@drawable/selector_btn_red"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout_btn_subscribe"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@drawable/selector_button_transfer"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical">
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_13"
+                        android:text="可用资产:"
+                        android:textColor="#ccffffff"
+                        android:textSize="@dimen/sp_11"
+                        app:typeface="heavy" />
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mTextView_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/sp_13"
+                        android:text="0 ASO"
+                        android:textColor="#ccffffff"
+                        android:textSize="@dimen/sp_11"
+                        app:typeface="heavy" />
+                </LinearLayout>
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="充值"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    app:typeface="heavy" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

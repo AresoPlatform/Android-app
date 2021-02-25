@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_206"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/invitation_banner" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_156"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="邀请好友注册下载希客"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_16"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="并开启挖矿即可获得推荐奖励"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_16"
+                                app:typeface="heavy" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <com.lihang.ShadowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:layout_marginTop="@dimen/dp_156"
+                        android:layout_marginRight="@dimen/dp_13"
+                        app:hl_cornerRadius="@dimen/dp_12"
+                        app:hl_leftShow="false"
+                        app:hl_rightShow="false"
+                        app:hl_shadowColor="@color/bg_color_shadow"
+                        app:hl_shadowLimit="@dimen/dp_10"
+                        app:hl_topShow="false">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_100"
+                            android:src="@mipmap/tips_img" />
+
+                    </com.lihang.ShadowLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/mLinearLayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_13"
+                    android:paddingRight="@dimen/dp_13">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_95">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_btn_share"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_65"
+                            android:layout_below="@id/mShadowLayout_top"
+                            android:layout_marginTop="@dimen/dp_m_30"
+                            android:background="@drawable/selector_text_color_invite"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/dp_20"
+                            android:text="分享我的邀请"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="medium" />
+
+                        <com.lihang.ShadowLayout
+                            android:id="@+id/mShadowLayout_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hl_cornerRadius="@dimen/dp_12"
+                            app:hl_leftShow="false"
+                            app:hl_rightShow="false"
+                            app:hl_shadowColor="@color/bg_color_shadow"
+                            app:hl_shadowLimit="@dimen/dp_10"
+                            app:hl_topShow="false">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_50"
+                                android:paddingLeft="@dimen/dp_20"
+                                android:paddingRight="@dimen/dp_20">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="我的邀请码"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="heavy" />
+
+                                <LinearLayout
+                                    android:id="@+id/mLinearLayout_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp_20"
+                                    android:background="@drawable/selector_text_color_address"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:id="@+id/mTextView_inviteCode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_24"
+                                        android:gravity="center"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_7"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_12"
+                                        app:typeface="medium" />
+
+                                    <ImageView
+                                        android:layout_width="@dimen/dp_14"
+                                        android:layout_height="@dimen/dp_14"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="@dimen/dp_7"
+                                        android:src="@mipmap/copy" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </com.lihang.ShadowLayout>
+                    </RelativeLayout>
+
+                    <com.lihang.ShadowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        app:hl_cornerRadius="@dimen/dp_12"
+                        app:hl_leftShow="false"
+                        app:hl_rightShow="false"
+                        app:hl_shadowColor="@color/bg_color_shadow"
+                        app:hl_shadowLimit="@dimen/dp_10"
+                        app:hl_topShow="false">
+
+                        <LinearLayout
+                            android:id="@+id/mLinearLayout_btn_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_20"
+                            android:paddingTop="@dimen/dp_20"
+                            android:paddingRight="@dimen/dp_20">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp_20">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="总邀请人数"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="heavy" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_totalNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="0"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="impact" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginBottom="@dimen/dp_20">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="总奖励(ASO)"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="heavy" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_totalReward"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="0"
+                                    android:textColor="@color/text_color_green2"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="impact" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </com.lihang.ShadowLayout>
+
+                    <com.lihang.ShadowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hl_cornerRadius="@dimen/dp_12"
+                        app:hl_leftShow="false"
+                        app:hl_rightShow="false"
+                        app:hl_shadowColor="@color/bg_color_shadow"
+                        app:hl_shadowLimit="@dimen/dp_10"
+                        app:hl_topShow="false">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_250">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layout_centerHorizontal="true"
+                                android:text="邀请链接二维码"
+                                android:textColor="@color/text_bg_black"
+                                android:textSize="@dimen/sp_15"
+                                app:typeface="heavy" />
+
+                            <ImageView
+                                android:id="@+id/mImageView_QRCode_link"
+                                android:layout_width="@dimen/dp_150"
+                                android:layout_height="@dimen/dp_150"
+                                android:layout_centerInParent="true" />
+
+                        </RelativeLayout>
+
+                    </com.lihang.ShadowLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>

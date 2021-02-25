@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_7"
+    android:paddingRight="@dimen/dp_7">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/AVLing"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_60"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/mRelativeLayout_noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_50"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/mImageView_noData"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_110"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/no_data" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_noData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mImageView_noData"
+            android:layout_centerHorizontal="true"
+            android:text="暂无打赏"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout_sorting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginRight="@dimen/dp_7"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="排序方式" />
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginBottom="@dimen/dp_7"
+                android:background="@drawable/shape_background_solid_radius"
+                android:orientation="horizontal">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_button_value"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="价值"
+                    android:textColor="@drawable/selector_font_style"
+                    android:textSize="@dimen/sp_12"
+                    app:typeface="regular" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_button_time"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="时间"
+                    android:textColor="@drawable/selector_font_style"
+                    android:textSize="@dimen/sp_12"
+                    app:typeface="regular" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_button_bg"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:layout_marginRight="@dimen/dp_1"
+                    android:background="@drawable/shape_dialog_value"
+                    android:textColor="@drawable/selector_font_style"
+                    android:textSize="@dimen/sp_12" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mRelativeLayout_sorting"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_10" />
+    </RelativeLayout>
+</RelativeLayout>

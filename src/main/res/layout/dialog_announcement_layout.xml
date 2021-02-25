@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_background_white"
+    android:orientation="vertical">
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:id="@+id/mTextView_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:paddingLeft="@dimen/dp_17"
+        android:paddingRight="@dimen/dp_17"
+        android:background="@drawable/shape_bg_white_t"
+        android:gravity="center"
+        android:text="智能科技 创享未来"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_15"
+        app:typeface="heavy" />
+
+    <ImageView
+        android:id="@+id/mImageView_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_btn_cancel"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="忽略"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/sp_14"
+            app:typeface="heavy" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_btn_determine"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="查看"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp_14"
+            app:typeface="heavy" />
+    </LinearLayout>
+
+</LinearLayout>
+

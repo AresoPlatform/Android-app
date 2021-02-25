@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.PostActivity">
+
+    <TextView
+        android:id="@+id/mTextView_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/bg_color">
+
+        <ImageView
+            android:id="@+id/mImageView_Back"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/return_mini" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发帖"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_post"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_25"
+            android:minWidth="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/shape_bg_stroke"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp_13"
+            app:typeface="medium" />
+
+    </RelativeLayout>
+
+    <com.xw.aschwitkey.view.TypefaceEditText
+        android:id="@+id/mEditText_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        android:maxLength="20"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:hint="帖子标题"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_15"
+        app:face="heavy" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@color/text_line" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.xw.aschwitkey.view.TypefaceEditText
+                android:id="@+id/mEditText_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="帖子内容"
+                android:letterSpacing="0.1"
+                android:lineSpacingMultiplier="1.2"
+                android:minHeight="@dimen/dp_100"
+                android:textColor="@color/text_bg_gray"
+                android:textSize="@dimen/sp_14"
+                app:face="regular" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/text_line" />
+
+            <RelativeLayout
+                android:id="@+id/mRelativeLayout_location"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="地理位置"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_bg_gray"
+                    app:typeface="heavy"/>
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp_75"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text="单击此处选择位置"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/TextColor1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:typeface="medium"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/text_line" />
+
+            <RelativeLayout
+                android:id="@id/mRelativeLayout_classification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="板块分类"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_bg_gray"
+                    app:typeface="heavy"/>
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_module"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text="希客"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_bg"
+                    app:typeface="medium"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@color/text_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

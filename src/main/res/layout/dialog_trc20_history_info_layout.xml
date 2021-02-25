@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_radius_stroke_12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="转出账户"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mImageView_copy"
+                android:text="TPt2...2G2"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+            <ImageView
+                android:id="@+id/mImageView_copy"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/copy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="接收账户"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mImageView_copy1"
+                android:text="TPt2a...X2G2"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+            <ImageView
+                android:id="@+id/mImageView_copy1"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/copy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="交易类型"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="调用智能合约"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout_hash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="交易ID"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_hash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mImageView_copy2"
+                android:text="1e2447c...b205dec4c"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <ImageView
+                android:id="@+id/mImageView_copy2"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/copy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="交易时间"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2020-11-16 10:00:18"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="区块高度"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="25056628"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手续费"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="0.50124 TRX"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="消耗资源"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_resources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="411带宽 50124能量"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="medium" />
+
+        </RelativeLayout>
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_goTronScan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@drawable/selector_btn_red_12dp_b"
+            android:gravity="center"
+            android:text="前往TRONSCAN查询详细信息"
+            android:textColor="@color/bg_red1"
+            android:textSize="@dimen/sp_14"
+            app:typeface="medium" />
+
+    </LinearLayout>
+
+</LinearLayout>

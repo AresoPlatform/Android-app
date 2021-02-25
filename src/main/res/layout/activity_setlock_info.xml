@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.SetLockInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/icon_back" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="锁仓置换信息"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="置换记录"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_14"
+            app:typeface="heavy" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_27"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/shape_ed_background_14dp"
+            android:orientation="horizontal">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_now"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="进行中"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_11"
+                app:typeface="medium" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_overdue"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="已过期"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_11"
+                app:typeface="medium" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_bg"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_blue_stroke_14dp" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView_setLock_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13" />
+
+            <RelativeLayout
+                android:id="@+id/mRelativeLayout_noData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/mImageView_noData"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_180"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/no_data" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mImageView_noData"
+                    android:layout_centerHorizontal="true"
+                    android:text="暂无置换记录"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function addLiquidity(privateKey,contractAddress,minLiquidity,maxTokens,deadline,msgValue,node){
+        var parameter1 = [{type:'uint256',value:minLiquidity},{type:'uint256',value:maxTokens},{type:'uint256',value:deadline}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"addLiquidity(uint256,uint256,uint256)",{feeLimit:40000000,callValue:msgValue},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.addLiquidityFunction(result.txid);
+        }catch(e){
+            stub.addLiquidityFunction("错误："+e.message);
+        }
+    }
+</script>
+</html>

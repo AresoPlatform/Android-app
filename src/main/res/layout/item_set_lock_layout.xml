@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_13"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_radius_stroke_12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="锁仓地址"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="TRMd4T...bo1d"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="锁仓额度"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_xas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2000.000 XAS"
+                android:textColor="@color/text_color_golden"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="锁仓置换"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_TXas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2000.000 AP"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="锁仓时间"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="3个月"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="锁仓高度"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="256000"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:orientation="horizontal">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="解锁时间"
+                android:textColor="@color/main4"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="2020-10-18 10:00 剩 "
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/mTextView_day_text"
+                android:text="2"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:text=" 天"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTextView_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_13"
+        android:visibility="gone" />
+
+</LinearLayout>

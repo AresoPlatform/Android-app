@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_background_white_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_350"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftBottom="0dp"
+            app:hl_cornerRadius_leftTop="@dimen/dp_24"
+            app:hl_cornerRadius_rightBottom="0dp"
+            app:hl_cornerRadius_rigthTop="@dimen/dp_24"
+            app:hl_leftShow="false"
+            app:hl_rightShow="false"
+            app:hl_shadowColor="@color/bg_color_shadow"
+            app:hl_shadowLimit="@dimen/dp_10"
+            app:hl_topShow="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:text="TRON地址绑定"
+                    android:textColor="@color/text_bg_black"
+                    android:textSize="@dimen/sp_15"
+                    app:typeface="heavy" />
+
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_ed_background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/shape_white_radius_stroke_12dp"
+                android:paddingLeft="@dimen/dp_13">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="TRON地址"
+                    android:textColor="@color/main4"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="heavy" />
+
+                <LinearLayout
+                    android:id="@+id/mLinearLayout_creatorAddress"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_27"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_13"
+                    android:background="@drawable/shape_ed_background_14dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_14"
+                        android:layout_height="@dimen/dp_14"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:src="@mipmap/icon_tron" />
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新建地址"
+                        android:textColor="@color/main4"
+                        android:textSize="@dimen/sp_12"
+                        app:typeface="regular" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="horizontal">
+
+                <com.xw.aschwitkey.view.TypefaceEditText
+                    android:id="@+id/mEditText_address"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入TRON地址..."
+                    android:paddingLeft="@dimen/dp_13"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp_13"
+                    app:face="impact" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_validateAddress"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_27"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/shape_ed_background_14dp"
+                    android:gravity="center"
+                    android:text="验证"
+                    android:textColor="@color/main4"
+                    android:textSize="@dimen/sp_12"
+                    app:typeface="regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/shape_red_radius"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="①TRON地址只能绑定一次且不可修改，请认真填写"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/sp_12"
+                app:typeface="regular" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="②点击新建地址将自动为您创建TRON地址并绑定至您的希客账户"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/sp_12"
+                app:typeface="regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_17"
+            android:orientation="horizontal">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_weight="0.3"
+                android:background="@drawable/selector_btn_red"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_btn_binding"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@drawable/selector_button_transfer"
+                android:gravity="center"
+                android:text="绑定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:typeface="heavy" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

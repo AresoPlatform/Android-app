@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.HisActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/return_mini" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TA的主页"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/shape_bg_stroke"
+            android:gravity="center"
+            android:minWidth="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:text="聊天"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp_13"
+            app:typeface="medium"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_30">
+
+                            <com.xw.aschwitkey.view.CircleImageView
+                                android:id="@+id/mImageView_head"
+                                android:layout_width="@dimen/dp_60"
+                                android:layout_height="@dimen/dp_60"
+                                android:src="@mipmap/default_icon" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_toRightOf="@id/mImageView_head"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_nickname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_17"
+                                    app:typeface="impact" />
+
+                                <LinearLayout
+                                    android:id="@+id/mLinearLayout_copy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:id="@+id/mTextView_weChat"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/text_bg_gray"
+                                        android:textSize="@dimen/sp_12"
+                                        app:typeface="regular" />
+
+                                    <ImageView
+                                        android:layout_width="@dimen/dp_14"
+                                        android:layout_height="@dimen/dp_14"
+                                        android:layout_gravity="center_vertical"
+                                        android:src="@mipmap/copy" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_btn_follow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/selector_btn_red_4dp"
+                                android:gravity="center"
+                                android:minWidth="@dimen/dp_50"
+                                android:paddingLeft="@dimen/dp_3"
+                                android:paddingRight="@dimen/dp_3"
+                                android:text="关注"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_13"
+                                app:typeface="medium"
+                                android:visibility="gone"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/white1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_13"
+                            android:layout_marginBottom="@dimen/dp_13"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/mLinearLayout_fans"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_fans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="0"
+                                    android:textColor="@color/text_bg"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="粉丝"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/mLinearLayout_follow"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_follow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="0"
+                                    android:textColor="@color/text_bg"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="关注"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_sendPostNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="0"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="帖子"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="最新帖子"
+                        android:textColor="@color/text_bg_black"
+                        android:textSize="@dimen/sp_14"
+                        app:typeface="medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_5"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@color/white1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_noData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/mImageView_noData"
+                                android:layout_width="@dimen/dp_270"
+                                android:layout_height="@dimen/dp_180"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/no_data" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_noData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/mImageView_noData"
+                                android:layout_centerHorizontal="true"
+                                android:text="暂无帖子"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="@dimen/sp_14" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mRecyclerView_blog"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

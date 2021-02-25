@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.TradingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/icon_back" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="阿希资产"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_13"
+                android:paddingRight="@dimen/dp_13">
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mShadowLayout_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_100">
+
+
+                        <LinearLayout
+                            android:id="@+id/mLinearLayout_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/dp_13">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_50"
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/xas" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:text="XAS"
+                                android:textColor="@color/text_bg_black"
+                                android:textSize="@dimen/sp_20"
+                                app:typeface="impact" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@id/mLinearLayout_currency"
+                            android:paddingRight="@dimen/dp_13">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_20"
+                                app:typeface="impact" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/mTextView_number"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="=3657158 CNY"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_13"
+                                android:visibility="gone"
+                                app:typeface="italic" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:layout_marginBottom="@dimen/dp_7"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_blockedBalances"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/text_bg_black"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_freezeAll_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="总冻结金额"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                                <ImageView
+                                    android:id="@+id/mImageView_numberQuestion"
+                                    android:layout_width="@dimen/dp_14"
+                                    android:layout_height="@dimen/dp_14"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:layout_toRightOf="@id/mTextView_freezeAll_text"
+                                    android:src="@mipmap/question" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/text_bg_black"
+                                android:textSize="@dimen/sp_14"
+                                app:typeface="impact" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="可用余额"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/mViewPager_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_380"
+                            android:layout_below="@id/mShadowLayout_tab" />
+
+                        <com.lihang.ShadowLayout
+                            android:id="@+id/mShadowLayout_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hl_cornerRadius="@dimen/dp_12"
+                            app:hl_leftShow="false"
+                            app:hl_rightShow="false"
+                            app:hl_shadowColor="@color/bg_color_shadow"
+                            app:hl_shadowLimit="@dimen/dp_10"
+                            app:hl_topShow="false">
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_50"
+                                app:tabBackground="@android:color/transparent"
+                                app:tabGravity="fill"
+                                app:tabIndicatorColor="@color/text_bg"
+                                app:tabIndicatorFullWidth="false"
+                                app:tabIndicatorHeight="0dp"
+                                app:tabRippleColor="@null"
+                                app:tabSelectedTextColor="@color/text_bg_black"
+                                app:tabTextColor="@color/text_color_gray" />
+                        </com.lihang.ShadowLayout>
+                    </RelativeLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mShadowLayout_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:visibility="gone"
+                    app:hl_bottomShow="false"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_topShow="false">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerView_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/dp_17" />
+
+                </com.lihang.ShadowLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

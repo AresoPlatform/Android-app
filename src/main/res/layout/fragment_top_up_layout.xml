@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_radius_bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30">
+
+        <ImageView
+            android:id="@+id/mImageView_QRCode"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_200"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/mLinearLayout_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mImageView_QRCode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_text_color_address"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_address"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_10"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12"
+                app:typeface="impact" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_7"
+                android:src="@mipmap/copy" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mLinearLayout_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 只能向此地址充值XAS，其他资产充入无法找回。"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/sp_11"
+                app:typeface="regular" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mTextView_prompt"
+                android:text="· 该ASCH地址仅用于 市场基金购买 和 论坛操作，不可用于Areso"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/sp_11"
+                app:typeface="regular" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

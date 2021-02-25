@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function deleteLp(privateKey,contractAddress,amount,minTrx,minTokens,deadline,node){
+        var parameter1 = [{type:'uint256',value:amount},{type:'uint256',value:minTrx},{type:'uint256',value:minTokens},{type:'uint256',value:deadline}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"removeLiquidity(uint256,uint256,uint256,uint256)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.deleteLpFunction(result.txid);
+        }catch(e){
+            stub.deleteLpFunction("错误："+e.message);
+        }
+    }
+</script>
+</html>

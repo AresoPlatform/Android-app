@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function selectBalance(contractAddress,tronAddress,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, '');
+            var contract = await tronWeb.contract().at(contractAddress);
+            var result = await contract.balanceOf(tronAddress).call();
+            stub.selectFunction(result.toString());
+        }catch(e){
+            stub.selectFunction("错误："+e.message);
+        }
+    }
+
+
+
+</script>
+</html>

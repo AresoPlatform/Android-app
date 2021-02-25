@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <paths>
+        <files-path
+            name="AschWallet"
+            path="AschWallet" />
+
+        <cache-path
+            name="AschWallet"
+            path="AschWallet" />
+
+        <external-path
+            name="camera_photos"
+            path="" />
+
+        <external-path
+            name="AschWallet"
+            path="AschWallet" />
+
+        <external-files-path
+            name="AschWallet"
+            path="AschWallet" />
+
+        <external-cache-path
+            name="AschWallet"
+            path="AschWallet" />
+    </paths>
+
+</resources>

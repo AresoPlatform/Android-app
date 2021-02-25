@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.FreezingRulesActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/return_mini" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TRX冻结解冻细则"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_13"
+                android:layout_marginBottom="@dimen/dp_3"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_17"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/shape_red_radius_solid_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="1. 冻结 TRX 可以获得投票权，冻结 1 个 TRX可获得 1 个投票权，1 个投票权等于 1 票。"
+                                android:textColor="@color/main1"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0_5"
+                                android:layout_marginTop="@dimen/dp_17"
+                                android:layout_marginBottom="@dimen/dp_17"
+                                android:background="@color/white1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/shape_red_radius_solid_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="2. 同时还可以选择获得带宽（Bandwidth Points）或者能量（Energy）中的一直，其额度取决于您所冻结的 TRX 占全网冻结 TRX 的比例。"
+                                android:textColor="@color/main1"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0_5"
+                                android:layout_marginTop="@dimen/dp_17"
+                                android:layout_marginBottom="@dimen/dp_17"
+                                android:background="@color/white1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/shape_red_radius_solid_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="3. 每次冻结达到 3 天后即可进行解冻，可以按照冻结时所获取的资源不同，分别进行解冻，但必须确保为获取这一资源而冻结的所有 TRX 都达到 3 天才能执行。"
+                                android:textColor="@color/main1"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0_5"
+                                android:layout_marginTop="@dimen/dp_17"
+                                android:layout_marginBottom="@dimen/dp_17"
+                                android:background="@color/white1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/shape_red_radius_solid_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="4. 解冻后，获取所获得的投票权，带宽（或者能量）等资源对应部分均将被移除。"
+                                android:textColor="@color/main1"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0_5"
+                                android:layout_marginTop="@dimen/dp_17"
+                                android:layout_marginBottom="@dimen/dp_17"
+                                android:background="@color/white1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/shape_red_radius_solid_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="5. 您每天可以获得 5000 个免费的带宽。"
+                                android:textColor="@color/main1"
+                                android:textSize="@dimen/sp_12"
+                                app:typeface="regular" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0_5"
+                                android:layout_marginTop="@dimen/dp_17"
+                                android:layout_marginBottom="@dimen/dp_17"
+                                android:background="@color/white1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_17"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/shape_red_radius_solid_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="6. 解冻后，已投票的投票权亦将被移除，此时您需要重新冻结 TRX 获得投票权再次进行投票，以确保您的投票权益不受影响。"
+                                android:textColor="@color/main1"
+                                android:textSize="@dimen/sp_13"
+                                app:typeface="regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

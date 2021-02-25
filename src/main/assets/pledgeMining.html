@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function transfer(privateKey,txasContractAddress,pountContractAddress,amount,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var contract = await tronWeb.contract().at(txasContractAddress);
+            var result = await contract.transfer(pountContractAddress,amount).send({feeLimit:40000000});
+            stub.transferFunction(result);
+        }catch(e){
+             stub.transferFunction("错误："+e.message);
+        }
+    }
+</script>
+</html>

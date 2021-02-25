@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_3"
+    android:paddingLeft="@dimen/dp_13"
+    android:paddingRight="@dimen/dp_13">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dp_12"
+        app:hl_leftShow="false"
+        app:hl_rightShow="false"
+        app:hl_shadowColor="@color/bg_color_shadow"
+        app:hl_shadowLimit="@dimen/dp_10"
+        app:hl_topShow="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_13">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现金币"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_withdrawGoldAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="12"
+                    android:textColor="@color/text_color_golden"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="impact" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手续费"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_serviceAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="1 ASO"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="impact" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRelativeLayout_withdrawAsoAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="到账ASO"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_withdrawAsoAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="11 ASO"
+                    android:textColor="@color/text_color_green2"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="impact" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现状态"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_isOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="提现成功"
+                    android:textColor="@color/text_color_green"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现时间"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_createTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="07/07 09:48"
+                    android:textColor="@color/TextColor1"
+                    android:textSize="@dimen/sp_11"
+                    app:typeface="regular" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRelativeLayout_updateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="到账时间"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/sp_13"
+                    app:typeface="medium" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_updateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="07/08 09:48"
+                    android:textColor="@color/TextColor1"
+                    android:textSize="@dimen/sp_11"
+                    app:typeface="regular" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRelativeLayout_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:background="@color/white">
+
+    <com.xw.aschwitkey.view.CircleImageView
+        android:id="@+id/mImageView_head"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/default_icon" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/mImageView_head">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_bg_gray"
+            android:textSize="@dimen/sp_15"
+            app:typeface="medium" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/TextColor1"
+            android:textSize="@dimen/sp_13"
+            app:typeface="regular" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="12:00"
+            android:textColor="@color/TextColor1"
+            android:textSize="@dimen/sp_11" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_messageNum"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_15"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_red_radius2"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:typeface="impact" />
+    </RelativeLayout>
+
+</RelativeLayout>

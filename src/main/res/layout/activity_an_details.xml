@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_13"
+    android:paddingRight="@dimen/dp_13"
+    tools:context=".activity.AnDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/icon_back" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_75"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/mShadowLayout_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_13"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <com.xw.aschwitkey.view.UpRoundImageView
+                    android:id="@+id/mImageView_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_133"
+                    android:scaleType="fitXY"
+                    app:radius="@dimen/dp_12" />
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mShadowLayout_cover"
+                android:layout_marginBottom="@dimen/dp_60"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_17">
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mTextView_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_ed_background_white"
+                        android:textColor="@color/text_bg_black"
+                        android:textSize="@dimen/sp_14"
+                        app:typeface="heavy" />
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mTextView_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_17"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/mTextView_content"
+                        android:text="2020-05-24 00:00:00"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/sp_12"
+                        app:typeface="medium" />
+                </RelativeLayout>
+            </com.lihang.ShadowLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

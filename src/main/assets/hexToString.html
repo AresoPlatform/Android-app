@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    function hexToString(number){
+        try{
+            const node = '***';
+            const tronWeb = new TronWeb(node, node, node, '');
+            return tronWeb.toBigNumber(number).toString(10);
+        }catch(e){
+            return "错误："+e.message;
+        }
+    }
+
+</script>
+</html>

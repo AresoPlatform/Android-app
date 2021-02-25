@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xw.aschwitkey">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/asch_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/asch_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".utils.MyFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".service.JWebSocketClientService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.JWebSocketClientService$GrayInnerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.CustomActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.InviteRewardsActivity" />
+        <activity android:name=".activity.HistoryInviteActivity" />
+        <activity android:name=".activity.AnnouncementActivity" />
+        <activity android:name=".activity.FundReleaseActivity" />
+        <activity android:name=".activity.IssuedAuditActivity" />
+        <activity android:name=".activity.FundAuditDetailsActivity" />
+        <activity android:name=".activity.AnAuditDetailsActivity" />
+        <activity android:name=".activity.AnDetailsActivity" />
+        <activity android:name=".activity.FundDividendsActivity" />
+        <activity android:name=".activity.AccountSettingActivity" />
+        <activity android:name=".activity.RewardAddressActivity" />
+        <activity android:name=".activity.SubscribeActivity" />
+        <activity android:name=".activity.SubscribeEndActivity" />
+        <activity android:name=".activity.RewardHistoryActivity" />
+        <activity android:name=".activity.WalletManagementActivity" />
+        <activity android:name=".activity.AccountManagementActivity" />
+        <activity android:name=".activity.ImportAccountActivity" />
+        <activity android:name=".activity.BackupAccountActivity" />
+        <activity android:name=".activity.BackupAccountActivity2" />
+        <activity android:name=".activity.BackupAccountActivity3" />
+        <activity android:name=".activity.SecondSecretActivity" />
+        <activity android:name=".activity.HelpActivity" />
+        <activity android:name=".activity.PostDetailsActivity" />
+        <activity android:name=".activity.PostActivity" />
+        <activity android:name=".activity.AddressActivity" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.HisActivity" />
+        <activity android:name=".activity.RankingActivity" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".activity.FansActivity" />
+        <activity android:name=".activity.FollowActivity" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.SetUserInfoActivity" />
+        <activity android:name=".activity.MapActivity" />
+        <activity android:name=".activity.MoreCommentActivity" />
+        <activity android:name=".activity.CommentActivity" />
+        <activity android:name=".activity.UpVoteActivity" />
+        <activity android:name=".activity.RewardActivity" />
+        <activity android:name=".activity.AgentActivity" />
+        <activity android:name=".activity.BountyHistoryActivity" />
+        <activity android:name=".activity.WithdrawalHistoryActivity" />
+        <activity android:name=".activity.GameActivity" />
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" />
+
+        <activity android:name=".activity.SetLockInfoActivity" />
+        <activity android:name=".activity.Trc20Activity" />
+        <activity android:name=".activity.AsoHistoryActivity" />
+        <activity android:name=".activity.ApHistoryActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.MoreApplicationsActivity" />
+        <activity android:name=".activity.LpHistoryActivity" />
+        <activity android:name=".activity.TradingActivity" />
+        <activity android:name=".activity.DdzHistoryActivity" />
+        <activity android:name=".activity.TWebViewActivity" />
+        <activity android:name=".activity.TronResourceActivity" />
+        <activity android:name=".activity.FreezingRulesActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_background_white_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftBottom="0dp"
+            app:hl_cornerRadius_leftTop="@dimen/dp_24"
+            app:hl_cornerRadius_rightBottom="0dp"
+            app:hl_cornerRadius_rigthTop="@dimen/dp_24"
+            app:hl_leftShow="false"
+            app:hl_rightShow="false"
+            app:hl_shadowColor="@color/bg_color_shadow"
+            app:hl_shadowLimit="@dimen/dp_10"
+            app:hl_topShow="false">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:text="板块分类"
+                android:textColor="@color/text_bg_black"
+                android:textSize="@dimen/sp_15"
+                app:typeface="heavy" />
+
+        </com.lihang.ShadowLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

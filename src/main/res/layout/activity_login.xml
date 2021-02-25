@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_80"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color">
+
+                    <TextView
+                        android:id="@+id/mTextView_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/mImageView_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:src="@mipmap/icon_back"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_320"
+                    android:layout_height="@dimen/dp_230"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:src="@mipmap/img_login" />
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_btn_passLogin"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="密码登录"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_btn_codeLogin"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="验证码登录"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <com.xw.aschwitkey.view.TypefaceEditText
+                        android:id="@+id/mEditText_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:background="@drawable/shape_ed_background_white"
+                        android:gravity="center_vertical"
+                        android:hint="手机号码"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingLeft="@dimen/dp_20"
+                        android:textColor="@color/text_bg_black"
+                        android:textColorHint="@color/text_color_gray"
+                        android:textSize="@dimen/sp_15"
+                        app:face="heavy" />
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mShadowLayout_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.xw.aschwitkey.view.TypefaceEditText
+                            android:id="@+id/mEditText_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:background="@drawable/shape_ed_background_white"
+                            android:gravity="center_vertical"
+                            android:hint="密码"
+                            android:inputType="textPassword"
+                            android:paddingLeft="@dimen/dp_20"
+                            android:textColor="@color/text_bg_black"
+                            android:textColorHint="@color/text_color_gray"
+                            android:textSize="@dimen/sp_15"
+                            app:face="heavy" />
+
+                        <ImageView
+                            android:id="@+id/mImageView_winfo"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:layout_marginRight="@dimen/dp_13"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/winfo_hide" />
+
+                    </RelativeLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mShadowLayout_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:visibility="gone"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50">
+
+                        <com.xw.aschwitkey.view.TypefaceEditText
+                            android:id="@+id/mEditText_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:background="@drawable/shape_ed_background_white"
+                            android:gravity="center_vertical"
+                            android:hint="验证码"
+                            android:inputType="textPassword"
+                            android:paddingLeft="@dimen/dp_20"
+                            android:textColor="@color/text_bg_black"
+                            android:textColorHint="@color/text_color_gray"
+                            android:textSize="@dimen/sp_15"
+                            app:face="heavy" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_getCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:gravity="center"
+                            android:text="获取验证码"
+                            android:textColor="@color/text_bg"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_btn_withdrawals"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:background="@drawable/selector_button_transfer"
+                    android:gravity="center"
+                    android:text="登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15"
+                    app:typeface="heavy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:orientation="horizontal">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_forgotPassword"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_ed_background_white"
+                    android:gravity="center"
+                    android:text="忘记密码"
+                    android:textColor="@color/text_bg_gray"
+                    android:textSize="@dimen/sp_15"
+                    app:typeface="heavy" />
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_register"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_ed_background_white"
+                    android:gravity="center"
+                    android:text="注册账户"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp_15"
+                    app:typeface="heavy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

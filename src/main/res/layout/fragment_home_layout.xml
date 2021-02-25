@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_133"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_13" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginRight="@dimen/dp_13"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginBottom="@dimen/dp_13"
+                        android:background="@drawable/shape_white_radius_stroke_12dp"
+                        android:paddingLeft="@dimen/dp_13"
+                        android:paddingRight="@dimen/dp_13">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="矿池信息"
+                            android:textColor="@color/main1"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_go_defi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:text="前往Areso >"
+                            android:textColor="@color/text_bg"
+                            android:textSize="@dimen/sp_12"
+                            app:typeface="regular" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_13"
+                        android:background="@drawable/shape_white_radius_stroke_12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_totalSupply"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="总量(ASO)"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="@dimen/dp_0_5"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_asoPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_color_green2"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="=1 ASO"
+                                    android:textColor="@color/text_color_green2"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="impact" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/white1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_startRewardBlock"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="开始产矿区块"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="@dimen/dp_0_5"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_getTotalPendingAso"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="已产出通证(ASO)"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/white1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_totalPledge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="总质押(AP)"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="@dimen/dp_0_5"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_totalPledge_lp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="总质押(LP)"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/white1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_apProportion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="AP矿池占比"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="@dimen/dp_0_5"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_lpProportion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="LP矿池占比"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/white1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_getRewardsPerBlock"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="AP矿池每区块产量"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="@dimen/dp_0_5"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_getRewardsPerBlock_lp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="？"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_14"
+                                    app:typeface="impact" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="LP矿池每区块产量"
+                                    android:textColor="@color/text_bg_gray"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:id="@+id/mRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/mRelativeLayout_noData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/mImageView_noData"
+                                android:layout_width="@dimen/dp_270"
+                                android:layout_height="@dimen/dp_180"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/no_data" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/mImageView_noData"
+                                android:layout_centerHorizontal="true"
+                                android:text="暂无认购基金信息"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="@dimen/sp_14" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mRecyclerView_fund"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

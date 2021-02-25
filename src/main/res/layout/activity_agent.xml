@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.AgentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/return_mini" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="换取历史"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/mShadowLayout_top_all" />
+
+                    <com.lihang.ShadowLayout
+                        android:id="@+id/mShadowLayout_top_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:layout_marginRight="@dimen/dp_13"
+                        app:hl_cornerRadius="@dimen/dp_12"
+                        app:hl_leftShow="false"
+                        app:hl_rightShow="false"
+                        app:hl_shadowColor="@color/bg_color_shadow"
+                        app:hl_shadowLimit="@dimen/dp_10"
+                        app:hl_topShow="false">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dp_17"
+                            android:paddingTop="@dimen/dp_13"
+                            android:paddingRight="@dimen/dp_17"
+                            android:paddingBottom="@dimen/dp_13">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="冻结总xas"
+                                android:textColor="@color/text_bg_gray"
+                                android:textSize="@dimen/sp_15"
+                                app:typeface="heavy" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_freezeAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="0 xas"
+                                android:textColor="@color/TextColor1"
+                                android:textSize="@dimen/sp_15"
+                                app:typeface="impact" />
+
+                        </RelativeLayout>
+
+                    </com.lihang.ShadowLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mRelativeLayout_noData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/mImageView_noData"
+                        android:layout_width="@dimen/dp_270"
+                        android:layout_height="@dimen/dp_180"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/no_data" />
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mTextView_noData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mImageView_noData"
+                        android:layout_centerHorizontal="true"
+                        android:text="暂无换取历史记录"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/sp_14" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

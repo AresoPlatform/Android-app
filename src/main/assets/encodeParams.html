@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/ethers-v4.min.js"></script>
+</head>
+
+<body></body>
+<script>
+    //建议使用ethers4.0.47版本
+    const AbiCoder = ethers.utils.AbiCoder;
+    const ADDRESS_PREFIX_REGEX = /^(41)/;
+    const ADDRESS_PREFIX = "41";
+
+    async function encodeParams(inputs){
+        let typesValues = inputs
+        let parameters = ''
+
+        if (typesValues.length == 0)
+            return parameters
+        const abiCoder = new AbiCoder();
+        let types = [];
+        const values = [];
+
+        for (let i = 0; i < typesValues.length; i++) {
+            let {type, value} = typesValues[i];
+            if (type == 'address')
+                value = value.replace(ADDRESS_PREFIX_REGEX, '0x');
+            else if (type == 'address[]')
+                value = value.map(v => toHex(v).replace(ADDRESS_PREFIX_REGEX, '0x'));
+            types.push(type);
+            values.push(value);
+        }
+
+        try {
+            parameters = abiCoder.encode(types, values).replace(/^(0x)/, '');
+            stub.encodeFunction(parameters);
+        } catch (ex) {
+            stub.encodeFunction("错误："+ex.message);
+        }
+
+    }
+</script>
+</html>

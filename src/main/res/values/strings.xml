@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">希客</string>
+    <string name="just">刚刚</string>
+    <string name="minutes_ago">分钟前</string>
+    <string name="half_an_hour_ago">半小时前</string>
+    <string name="hour_ago">小时前</string>
+</resources>

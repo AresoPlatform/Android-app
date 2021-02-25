@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRelativeLayout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_13"
+    android:layout_marginTop="@dimen/dp_13"
+    android:layout_marginRight="@dimen/dp_13">
+
+    <ImageView
+        android:id="@+id/mImageView_left"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/zhuanru" />
+
+    <RelativeLayout
+        android:id="@+id/mRelativeLayout_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_toRightOf="@id/mImageView_left">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="TQn9Y***cbLSE"
+            android:textColor="@color/text_bg_gray"
+            android:textSize="@dimen/sp_11"
+            app:typeface="medium" />
+
+        <ImageView
+            android:id="@+id/mImageView_copy"
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/mTextView_address"
+            android:src="@mipmap/copy"/>
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:text="-20000000"
+            android:textColor="@color/text_color_red"
+            android:textSize="@dimen/sp_12"
+            app:typeface="impact" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_toRightOf="@id/mImageView_left"
+        android:layout_below="@id/mRelativeLayout_top">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:maxEms="8"
+            android:ellipsize="end"
+            android:text="备注："
+            android:textColor="@color/TextColor1"
+            android:textSize="@dimen/sp_11"
+            app:typeface="regular" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="32min ago"
+            android:textColor="@color/TextColor1"
+            android:textSize="@dimen/sp_11"
+            app:typeface="regular" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

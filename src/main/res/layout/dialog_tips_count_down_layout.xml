@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_radius"
+    android:orientation="vertical">
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginRight="@dimen/dp_17"
+        android:layout_marginBottom="@dimen/dp_13"
+        android:gravity="center"
+        android:text="ASO娱乐游戏忠告"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_15"
+        app:typeface="heavy" />
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginRight="@dimen/dp_17"
+        android:gravity="center"
+        android:text="注意自我保护，谨防受骗上当。"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_13"
+        app:typeface="regular" />
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginRight="@dimen/dp_17"
+        android:gravity="center"
+        android:text="适度游戏益脑，沉迷游戏伤身。"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_13"
+        app:typeface="regular" />
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginRight="@dimen/dp_17"
+        android:gravity="center"
+        android:text="合理安排时间，享受健康生活。"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_13"
+        app:typeface="regular" />
+
+    <TextView
+        android:id="@+id/mTextView_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginRight="@dimen/dp_17"
+        android:layout_centerHorizontal="true"
+        android:autoLink="web"
+        android:gravity="center"
+        android:text="依据Areso官方白皮书章程，每局游戏将收取赢家13%的税收，其中8%进入销毁地址，5%进入Dao基金地址，相关地址和记录请在官网(https://areso.io)和波场浏览器(https://tronscan.io)查询。"
+        android:textColor="@color/text_bg_black"
+        android:textSize="@dimen/sp_12" />
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginRight="@dimen/dp_17"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="游戏安装包较大，约为150M，请使用wifi下载，注意流量消耗，本游戏最终解释权归ASO社区所有。"
+        android:textColor="@color/text_color_red"
+        android:textSize="@dimen/sp_12"
+        app:typeface="regular" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/white1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_false"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_white_bl"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/text_bg_gray"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:background="@color/white1"/>
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_true"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="10秒"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp_12"
+            app:typeface="heavy"/>
+
+    </LinearLayout>
+
+</LinearLayout>

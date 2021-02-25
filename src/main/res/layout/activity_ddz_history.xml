@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.DdzHistoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/icon_back" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="充值/提现记录"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_13">
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_27"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:background="@drawable/shape_ed_background_14dp"
+            android:orientation="horizontal">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_rechargeRecord"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="充值记录"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12"
+                app:typeface="medium" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_withdrawalsRecord"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="提现记录"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_12"
+                app:typeface="medium" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_bg"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_blue_stroke_14dp" />
+
+        </FrameLayout>
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_errSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_27"
+            android:layout_marginRight="@dimen/dp_13"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:background="@drawable/shape_blue_stroke_14dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="申诉"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp_12"
+            app:typeface="medium" />
+    </RelativeLayout>
+
+    <com.xw.aschwitkey.view.AutoHeightViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

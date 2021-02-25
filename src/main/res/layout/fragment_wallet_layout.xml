@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/mImageView_left"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/left_ap"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mImageView_right"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/right_ap"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_13"
+        android:background="@drawable/shape_white_radius_stroke_12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mTextView_left"
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="@dimen/dp_9"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_gray_golden_radius" />
+
+        <TextView
+            android:id="@+id/mTextView_center"
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="@dimen/dp_9"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_gray_green_radius" />
+
+        <TextView
+            android:id="@+id/mTextView_right"
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="@dimen/dp_9"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_gray_red_radius" />
+    </LinearLayout>
+</RelativeLayout>

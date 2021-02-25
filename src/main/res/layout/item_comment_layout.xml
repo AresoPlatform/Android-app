@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_13"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/mRelativeLayout_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xw.aschwitkey.view.CircleImageView
+            android:id="@+id/mImageView_head"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:src="@mipmap/default_icon"
+            app:border_color="@color/white1"
+            app:border_width="@dimen/dp_0_5" />
+
+        <LinearLayout
+            android:id="@+id/mLinearLayout_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_toRightOf="@id/mImageView_head"
+            android:orientation="vertical">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_14"
+                app:typeface="impact" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/mTextView_comment"
+                    style="@style/defaultTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/mTextView_time"
+                    android:autoLink="web"
+                    android:text=""
+                    android:textColor="@color/main1"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/mTextView_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:layout_marginRight="@dimen/dp_7"
+                    android:text=""
+                    android:textColor="@color/TextColor1"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mLinearLayout_comment"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_toRightOf="@id/mImageView_head"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mTextView_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color_ed"
+                android:layout_marginTop="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="— 展开回复 —"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_11"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

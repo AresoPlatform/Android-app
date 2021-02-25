@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_13">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_btn_invite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_65"
+            android:layout_below="@id/mShadowLayout_top"
+            android:layout_marginTop="@dimen/dp_m_30"
+            android:background="@drawable/selector_text_color_invite"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_18"
+            android:text="加购基金"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:typeface="heavy" />
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/mShadowLayout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius="@dimen/dp_12"
+            app:hl_leftShow="false"
+            app:hl_rightShow="false"
+            app:hl_shadowColor="@color/bg_color_shadow"
+            app:hl_shadowLimit="@dimen/dp_10"
+            app:hl_topShow="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_fundName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="基金第三期"
+                    android:textColor="@color/text_bg_black"
+                    android:textSize="@dimen/sp_15"
+                    app:typeface="heavy" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mTextView_purchasedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="只需加购10份"
+                        android:textColor="@color/text_bg_gray"
+                        android:textSize="@dimen/sp_11"
+                        app:typeface="regular"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="right">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="可获得邀请分红 "
+                            android:textColor="@color/text_bg_gray"
+                            android:textSize="@dimen/sp_11"
+                            app:typeface="regular"/>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_invitedRewards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1000"
+                            android:textColor="@color/text_color_golden"
+                            android:textSize="@dimen/sp_11"
+                            app:typeface="regular"/>
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" xas"
+                            android:textColor="@color/text_bg_gray"
+                            android:textSize="@dimen/sp_11"
+                            app:typeface="regular"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.lihang.ShadowLayout>
+    </RelativeLayout>
+
+</LinearLayout>

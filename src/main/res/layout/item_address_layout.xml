@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTextView_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择位置"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/main"
+            />
+
+        <TextView
+            android:id="@+id/mTextView_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="@dimen/sp_13"
+            />
+
+        <TextView
+            android:id="@+id/mTextView_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="不显示位置"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_bg"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/mImageView"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        android:src="@mipmap/address_tag"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

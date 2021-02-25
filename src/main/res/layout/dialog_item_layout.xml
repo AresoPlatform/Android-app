@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_background_white_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_announcement"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_17"
+            android:gravity="center"
+            android:background="@drawable/selector_btn_white_type"
+            android:text="发布公告"
+            android:textColor="@drawable/selector_text_color_blue_type"
+            android:textSize="@dimen/sp_14"
+            app:typeface="medium" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:id="@+id/mTextView_fund"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            android:layout_marginBottom="@dimen/dp_17"
+            android:gravity="center"
+            android:background="@drawable/selector_btn_white_type"
+            android:text="发布基金"
+            android:textColor="@drawable/selector_text_color_blue_type"
+            android:textSize="@dimen/sp_14"
+            app:typeface="medium" />
+
+    </LinearLayout>
+</LinearLayout>

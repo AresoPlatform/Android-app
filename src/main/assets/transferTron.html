@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function transfer(fromAddress,toAddress,amount,privateKey,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            //创建一个未签名的TRX转账交易
+            var tradeobj = await tronWeb.transactionBuilder.sendTrx(
+                toAddress,
+                amount,
+                fromAddress
+            );
+            //签名
+            var signedtxn = await tronWeb.trx.sign(
+                tradeobj,
+                privateKey
+            );
+            //广播
+            const receipt = await tronWeb.trx.sendRawTransaction(
+                signedtxn
+            ).then(output => {
+                stub.transferFunction(JSON.stringify(output));
+            });
+        }catch(e){
+             stub.transferFunction("错误："+e.message);
+        }
+    }
+
+
+</script>
+</html>

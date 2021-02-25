@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_13"
+    android:paddingRight="@dimen/dp_13"
+    tools:context=".activity.AnnouncementActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/mTextView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/icon_back" />
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公告发布"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_7">
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/mShadowLayout_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.xw.aschwitkey.view.UpRoundImageView
+                        android:id="@+id/mImageView_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_133"
+                        android:scaleType="fitXY"
+                        app:radius="@dimen/dp_12" />
+
+                    <LinearLayout
+                        android:id="@+id/mLinearLayout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="添加封面"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="regular" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="（建议使用1000×400px，或 5 : 2 比例的封面图）"
+                            android:textColor="@color/text_color_red"
+                            android:textSize="@dimen/sp_12"
+                            app:typeface="regular" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/mShadowLayout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mShadowLayout_cover"
+                android:layout_marginTop="@dimen/dp_7"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <com.xw.aschwitkey.view.TypefaceEditText
+                    android:id="@+id/mEditText_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_ed_background_white"
+                    android:hint="公告标题"
+                    android:minHeight="@dimen/dp_50"
+                    android:paddingLeft="@dimen/dp_17"
+                    android:paddingRight="@dimen/dp_17"
+                    android:textColor="@color/text_bg_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="@dimen/sp_14"
+                    app:face="heavy" />
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mShadowLayout_title"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginBottom="@dimen/dp_60"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="@color/bg_color_shadow"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <com.xw.aschwitkey.view.TypefaceEditText
+                    android:id="@+id/mEditText_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_ed_background_white"
+                    android:gravity="top"
+                    android:hint="公告内容"
+                    android:minHeight="@dimen/dp_200"
+                    android:padding="@dimen/dp_17"
+                    android:textColor="@color/text_bg_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="@dimen/sp_14"
+                    app:face="heavy" />
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:hl_cornerRadius="@dimen/dp_12"
+                app:hl_leftShow="false"
+                app:hl_rightShow="false"
+                app:hl_shadowColor="#4c4e8cee"
+                app:hl_shadowLimit="@dimen/dp_10"
+                app:hl_topShow="false">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_button_transfer"
+                    android:gravity="center"
+                    android:text="发布审核"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    app:typeface="heavy" />
+            </com.lihang.ShadowLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

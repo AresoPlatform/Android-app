@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function selectLpInfo(contractAddress,tronAddress,asoContractAddress,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, '');
+            var contract = await tronWeb.contract().at(contractAddress);
+            var result = await contract.getSingleInfo(tronAddress,asoContractAddress).call();
+            var result1 = await contract.getBalance(tronAddress,[asoContractAddress]).call();
+            stub.selectLpInfoFunction(JSON.stringify(result)+"@"+JSON.stringify(result1));
+        }catch(e){
+            stub.selectLpInfoFunction("错误："+e.message);
+        }
+    }
+
+
+
+</script>
+</html>

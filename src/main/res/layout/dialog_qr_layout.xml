@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_background_white_top"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius_leftBottom="0dp"
+        app:hl_cornerRadius_leftTop="@dimen/dp_24"
+        app:hl_cornerRadius_rightBottom="0dp"
+        app:hl_cornerRadius_rigthTop="@dimen/dp_24"
+        app:hl_leftShow="false"
+        app:hl_rightShow="false"
+        app:hl_shadowColor="@color/bg_color_shadow"
+        app:hl_shadowLimit="@dimen/dp_10"
+        app:hl_topShow="false">
+
+        <com.xw.aschwitkey.view.TypefaceTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="收款码"
+            android:textColor="@color/text_bg_black"
+            android:textSize="@dimen/sp_15"
+            app:typeface="heavy" />
+
+    </com.lihang.ShadowLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_QRCode"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_180"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_44"/>
+
+    <com.xw.aschwitkey.view.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_27"
+        android:layout_marginBottom="@dimen/dp_27"
+        android:text="请将XAS充值到上述地址，其他资产充入无法找回。"
+        android:textColor="@color/text_color_red"
+        android:textSize="@dimen/sp_12"
+        app:typeface="regular" />
+
+</LinearLayout>

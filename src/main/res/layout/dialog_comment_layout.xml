@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/dp_7"
+        android:paddingBottom="@dimen/dp_7">
+
+        <com.xw.aschwitkey.view.TypefaceEditText
+            android:id="@+id/mEditText_Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13"
+            android:background="@drawable/shape_gray_background_18dp"
+            android:gravity="center_vertical|left"
+            android:hint="写评论..."
+            android:inputType="textMultiLine"
+            android:maxLines="6"
+            android:minHeight="@dimen/dp_35"
+            android:minLines="1"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mTextView_T"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/dp_13"
+        android:background="@drawable/selector_bg_blue_15dp"
+        android:gravity="center"
+        android:text="发送"
+        android:textColor="@color/white" />
+
+</LinearLayout>

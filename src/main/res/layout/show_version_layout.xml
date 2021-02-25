@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_140"
+            android:scaleType="fitXY"
+            android:src="@mipmap/update" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/versiondialog">
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_Version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_bg_black"
+                    android:textSize="@dimen/sp_14"
+                    app:typeface="heavy" />
+
+            </LinearLayout>
+
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mLinearLayout_1"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dp_17"
+                android:textColor="@color/text_bg_gray"
+                android:textSize="@dimen/sp_12"
+                app:typeface="medium" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mTextView_Text"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/dp_17">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:orientation="horizontal">
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mButton_C"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginRight="@dimen/dp_17"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="退出"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/sp_14"
+                        app:typeface="medium" />
+
+                    <com.xw.aschwitkey.view.TypefaceTextView
+                        android:id="@+id/mButton_T"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/selector_btn_blue_type"
+                        android:gravity="center"
+                        android:minWidth="@dimen/dp_95"
+                        android:text="立即升级"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_14"
+                        app:typeface="medium" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

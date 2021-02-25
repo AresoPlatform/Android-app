@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="file:///android_asset/browserify-asch.js"></script>
+</head>
+<body></body>
+<script>
+	function dappTrans(amount,height,secret,secondSecret){
+	    try{
+            var args = [height,amount*100000000];
+            var params = {
+                type:4,
+                fee:0.1*100000000,
+                args:args,
+                secret:secret,
+                secondSecret:secondSecret
+            }
+            return JSON.stringify({
+                transaction:window.AschJS.transaction.createTransactionEx(params)
+            });
+		}catch(e){
+            return e.message
+        }
+	}
+
+
+
+</script>
+</html>

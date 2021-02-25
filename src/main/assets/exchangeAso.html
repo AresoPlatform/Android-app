@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function exchangeAso(privateKey,contractAddress,minTokens,deadline,msgValue,node){
+        var parameter1 = [{type:'uint256',value:minTokens},{type:'uint256',value:deadline}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"trxToTokenSwapInput(uint256,uint256)",{feeLimit:40000000,callValue:msgValue},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.exchangeAsoFunction(result.txid);
+        }catch(e){
+            stub.exchangeAsoFunction("错误："+e.message);
+        }
+    }
+
+    async function exchangeTrx(privateKey,contractAddress,tokensSold,minTrx,deadline,isApprove,asoTokenAddress,lpExchangeAddress,approveValue,node){
+        var parameter1 = [{type:'uint256',value:tokensSold},{type:'uint256',value:minTrx},{type:'uint256',value:deadline}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            if(isApprove){
+                var parameter2 = [{type:'address',value:lpExchangeAddress},{type:'uint256',value:approveValue}];
+                var transaction2 = await tronWeb.transactionBuilder.triggerSmartContract(asoTokenAddress,"approve(address,uint256)",{feeLimit:40000000},parameter2,tronWeb.address.fromPrivateKey(privateKey));
+                var signedtxn2 = await tronWeb.trx.sign(transaction2.transaction, privateKey);
+                var approveResult = await tronWeb.trx.sendRawTransaction(signedtxn2);
+            }
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"tokenToTrxSwapInput(uint256,uint256,uint256)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.exchangeAsoFunction(result.txid);
+        }catch(e){
+            stub.exchangeAsoFunction("错误："+e.message);
+        }
+    }
+
+    async function exchangeAsoTransfer(privateKey,contractAddress,minTokens,deadline,recipient,msgValue,node){
+        var parameter1 = [{type:'uint256',value:minTokens},{type:'uint256',value:deadline},{type:'address',value:recipient}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            if(!tronWeb.isAddress(recipient)){
+                stub.exchangeAsoFunction("错误：接收方地址不是一个有效的TRON地址");
+                return;
+            }
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"trxToTokenTransferInput(uint256,uint256,address)",{feeLimit:40000000,callValue:msgValue},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.exchangeAsoFunction(result.txid);
+        }catch(e){
+            stub.exchangeAsoFunction("错误："+e.message);
+        }
+    }
+
+    async function exchangeTrxTransfer(privateKey,contractAddress,tokensSold,minTrx,deadline,recipient,isApprove,asoTokenAddress,lpExchangeAddress,approveValue,node){
+        var parameter1 = [{type:'uint256',value:tokensSold},{type:'uint256',value:minTrx},{type:'uint256',value:deadline},{type:'address',value:recipient}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            if(!tronWeb.isAddress(recipient)){
+                stub.exchangeAsoFunction("错误：接收方地址不是一个有效的TRON地址");
+                return;
+            }
+            if(isApprove){
+                var parameter2 = [{type:'address',value:lpExchangeAddress},{type:'uint256',value:approveValue}];
+                var transaction2 = await tronWeb.transactionBuilder.triggerSmartContract(asoTokenAddress,"approve(address,uint256)",{feeLimit:40000000},parameter2,tronWeb.address.fromPrivateKey(privateKey));
+                var signedtxn2 = await tronWeb.trx.sign(transaction2.transaction, privateKey);
+                var approveResult = await tronWeb.trx.sendRawTransaction(signedtxn2);
+            }
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"tokenToTrxTransferInput(uint256,uint256,uint256,address)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.exchangeAsoFunction(result.txid);
+        }catch(e){
+            stub.exchangeAsoFunction("错误："+e.message);
+        }
+    }
+
+    async function exchangeAsoU(privateKey,contractAddress,tokensSold,minTokensBought,deadline,tokenAddr,isApprove,asoTokenAddress,lpExchangeAddress,approveValue,node){
+        var parameter1 = [{type:'uint256',value:tokensSold},{type:'uint256',value:minTokensBought},{type:'uint256',value:1},{type:'uint256',value:deadline},{type:'address',value:tokenAddr}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            if(isApprove){
+                var parameter2 = [{type:'address',value:lpExchangeAddress},{type:'uint256',value:approveValue}];
+                var transaction2 = await tronWeb.transactionBuilder.triggerSmartContract(asoTokenAddress,"approve(address,uint256)",{feeLimit:40000000},parameter2,tronWeb.address.fromPrivateKey(privateKey));
+                var signedtxn2 = await tronWeb.trx.sign(transaction2.transaction, privateKey);
+                var approveResult = await tronWeb.trx.sendRawTransaction(signedtxn2);
+            }
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"tokenToTokenSwapInput(uint256,uint256,uint256,uint256,address)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.exchangeAsoFunction(result.txid);
+        }catch(e){
+            stub.exchangeAsoFunction("错误："+e.message);
+        }
+    }
+
+    async function exchangeAsoTransferU(privateKey,contractAddress,tokensSold,minTokensBought,deadline,recipient,tokenAddr,isApprove,asoTokenAddress,lpExchangeAddress,approveValue,node){
+        var parameter1 = [{type:'uint256',value:tokensSold},{type:'uint256',value:minTokensBought},{type:'uint256',value:1},{type:'uint256',value:deadline},{type:'address',value:recipient},{type:'address',value:tokenAddr}];
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            if(!tronWeb.isAddress(recipient)){
+                stub.exchangeAsoFunction("错误：接收方地址不是一个有效的TRON地址");
+                return;
+            }
+            if(isApprove){
+                var parameter2 = [{type:'address',value:lpExchangeAddress},{type:'uint256',value:approveValue}];
+                var transaction2 = await tronWeb.transactionBuilder.triggerSmartContract(asoTokenAddress,"approve(address,uint256)",{feeLimit:40000000},parameter2,tronWeb.address.fromPrivateKey(privateKey));
+                var signedtxn2 = await tronWeb.trx.sign(transaction2.transaction, privateKey);
+                var approveResult = await tronWeb.trx.sendRawTransaction(signedtxn2);
+            }
+            var transaction = await tronWeb.transactionBuilder.triggerSmartContract(contractAddress,"tokenToTokenTransferInput(uint256,uint256,uint256,uint256,address,address)",{feeLimit:40000000},parameter1,tronWeb.address.fromPrivateKey(privateKey));
+            var signedtxn = await tronWeb.trx.sign(transaction.transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.exchangeAsoFunction(result.txid);
+        }catch(e){
+            stub.exchangeAsoFunction("错误："+e.message);
+        }
+    }
+
+</script>
+</html>

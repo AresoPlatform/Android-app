@@ -1,0 +1,18 @@
+<html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="file:///android_asset/browserify-asch.js"></script>
+    <!--助记词加密-->
+    <script type="text/javascript">
+     function encrypt(str) {
+         var publicKeyS=AschJS.crypto.getKeys(str);
+         var publicKey=publicKeyS.publicKey;
+         return publicKey;
+     }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

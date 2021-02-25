@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:paddingLeft="@dimen/dp_13"
+    android:paddingRight="@dimen/dp_13">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:orientation="vertical">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80">
+
+                        <com.xw.aschwitkey.view.CircleImageView
+                            android:id="@+id/mImageView_head"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/touxiang_max" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_head"
+                            android:orientation="vertical">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_bg_black"
+                                android:textSize="@dimen/sp_17"
+                                app:typeface="heavy" />
+
+                            <LinearLayout
+                                android:id="@+id/mLinearLayout_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/dp_3"
+                                android:background="@drawable/selector_text_color_address"
+                                android:orientation="horizontal">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:gravity="center"
+                                    android:paddingLeft="@dimen/dp_8"
+                                    android:paddingRight="@dimen/dp_8"
+                                    android:textColor="@color/text_bg"
+                                    android:textSize="@dimen/sp_10"
+                                    app:typeface="impact" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_14"
+                                    android:layout_height="@dimen/dp_14"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="@dimen/dp_7"
+                                    android:src="@mipmap/copy" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_accountSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_accountSetting"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/zhanghu" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_accountSetting"
+                            android:text="账户中心"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_walletSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_walletSetting"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/icon_wallet" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_walletSetting"
+                            android:text="钱包管理"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_trading"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_trading"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/asch_deal" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_trading"
+                            android:text="阿希资产"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_help"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/bangzhu" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_help"
+                            android:text="帮助中心"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mShadowLayout_inviteRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_inviteRewards"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_inviteRewards"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/jiangli" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_inviteRewards"
+                            android:text="邀请分红"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_invitation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_invitation"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/register" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_invitation"
+                            android:text="邀请注册"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <LinearLayout
+                            android:id="@+id/mLinearLayout_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/mImageView_right"
+                            android:background="@drawable/selector_text_color_address"
+                            android:orientation="horizontal">
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_20"
+                                android:gravity="center"
+                                android:text="复制链接"
+                                android:paddingLeft="@dimen/dp_8"
+                                android:paddingRight="@dimen/dp_8"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_10"
+                                app:typeface="impact" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_14"
+                                android:layout_height="@dimen/dp_14"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/dp_7"
+                                android:src="@mipmap/copy" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/mImageView_right"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_setting"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/setting" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_setting"
+                            android:text="设置"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_game"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_game"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/yule" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_game"
+                            android:text="阿希娱乐"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    app:hl_cornerRadius="@dimen/dp_12"
+                    app:hl_leftShow="false"
+                    app:hl_rightShow="false"
+                    app:hl_shadowColor="@color/bg_color_shadow"
+                    app:hl_shadowLimit="@dimen/dp_10"
+                    app:hl_topShow="false">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout_outLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mImageView_outLogin"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:src="@mipmap/exit" />
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_toRightOf="@id/mImageView_outLogin"
+                            android:text="退出账户"
+                            android:textColor="@color/text_bg_black"
+                            android:textSize="@dimen/sp_15"
+                            app:typeface="heavy" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/caozuo" />
+                    </RelativeLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

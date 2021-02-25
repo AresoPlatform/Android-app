@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function selectUsdtInfo(contractAddress,tronAddress,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, '');
+            var contract = await tronWeb.contract().at(contractAddress);
+            var result = await contract.getSingleInfo(tronAddress,'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t').call();
+            stub.selectUsdtInfoFunction(JSON.stringify(result));
+        }catch(e){
+            stub.selectUsdtInfoFunction("错误："+e.message);
+        }
+    }
+
+
+
+</script>
+</html>

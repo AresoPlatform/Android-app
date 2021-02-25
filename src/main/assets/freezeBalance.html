@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function freezeBalance(privateKey,amount,resource,receiverAddress,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var transaction = await tronWeb.transactionBuilder.freezeBalance(tronWeb.toSun(amount),3,resource,tronWeb.address.fromPrivateKey(privateKey),receiverAddress, 1);
+            var signedtxn = await tronWeb.trx.sign(transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.freezeBalanceFunction(result.txid);
+        }catch(e){
+            stub.freezeBalanceFunction("错误："+e.message);
+        }
+    }
+
+    async function unfreezeBalance(privateKey,resource,receiverAddress,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var transaction = await tronWeb.transactionBuilder.unfreezeBalance(resource,tronWeb.address.fromPrivateKey(privateKey),receiverAddress,1)
+            var signedtxn = await tronWeb.trx.sign(transaction, privateKey);
+            var result = await tronWeb.trx.sendRawTransaction(signedtxn);
+            stub.unFreezeBalanceFunction(result.txid);
+        }catch(e){
+            stub.unFreezeBalanceFunction("错误："+e.message);
+        }
+    }
+
+</script>
+</html>

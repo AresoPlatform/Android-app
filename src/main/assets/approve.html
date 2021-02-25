@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" type="text/javascript"
+            src="file:///android_asset/TronWeb.js"></script>
+</head>
+
+<body></body>
+<script>
+    async function approve(privateKey,contractAddress,spenderAddress,value,node){
+        try{
+            var tronWeb = new TronWeb(node, node, node, privateKey);
+            var contract = await tronWeb.contract().at(contractAddress);
+            var result = await contract.approve(spenderAddress,value).send({feeLimit:40000000});
+            stub.approveFunction(result);
+        }catch(e){
+            stub.approveFunction("错误："+e.message);
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_13"
+    tools:context=".activity.UpVoteActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13">
+
+        <com.xw.aschwitkey.view.CircleImageView
+            android:id="@+id/mImageView_head"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@mipmap/default_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_toLeftOf="@id/mUpRoundImageView_cover"
+            android:layout_toRightOf="@id/mImageView_head"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10">
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_rewardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="baiyu1121"
+                android:textColor="@color/text_bg_black"
+                android:textSize="@dimen/sp_15" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="打赏了标题"
+                android:textColor="@color/text_bg_gray"
+                android:textSize="@dimen/sp_13" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="+ 200.00 xas"
+                android:textColor="@color/text_color_golden1"
+                android:textSize="@dimen/sp_13" />
+
+            <com.xw.aschwitkey.view.TypefaceTextView
+                android:id="@+id/mTextView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="07-02 10:20"
+                android:textColor="@color/TextColor1"
+                android:textSize="@dimen/sp_11" />
+        </LinearLayout>
+
+        <com.xw.aschwitkey.view.UpRoundImageView
+            android:id="@+id/mUpRoundImageView_cover"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentRight="true"
+            android:src="@color/text_bg"
+            app:radius="@dimen/dp_6" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mTextView_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/bg_color" />
+</LinearLayout>

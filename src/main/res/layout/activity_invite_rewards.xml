@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.InviteRewardsActivity">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xw.aschwitkey.view.StickyScrollView
+            android:id="@+id/mStickyScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_206"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/yaoqing_banner" />
+
+                    <LinearLayout
+                        android:id="@+id/mLinearLayout_sticky"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_13"
+                        android:tag="sticky">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/mImageView_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_back" />
+
+                            <com.xw.aschwitkey.view.TypefaceTextView
+                                android:id="@+id/mTextView_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="邀请分红"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_15"
+                                android:visibility="gone"
+                                app:typeface="heavy" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <com.lihang.ShadowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:layout_marginTop="@dimen/dp_156"
+                        android:layout_marginRight="@dimen/dp_13"
+                        app:hl_cornerRadius="@dimen/dp_12"
+                        app:hl_leftShow="false"
+                        app:hl_rightShow="false"
+                        app:hl_shadowColor="@color/bg_color_shadow"
+                        app:hl_shadowLimit="@dimen/dp_10"
+                        app:hl_topShow="false">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_100"
+                            android:src="@mipmap/buzou" />
+
+                    </com.lihang.ShadowLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/mLinearLayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_13"
+                    android:paddingRight="@dimen/dp_13">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.xw.aschwitkey.view.TypefaceTextView
+                            android:id="@+id/mTextView_btn_invite"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_65"
+                            android:layout_below="@id/mShadowLayout_top"
+                            android:layout_marginTop="@dimen/dp_m_30"
+                            android:background="@drawable/selector_text_color_invite"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/dp_18"
+                            android:text="复制邀请链接"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_14"
+                            app:typeface="heavy" />
+
+                        <com.lihang.ShadowLayout
+                            android:id="@+id/mShadowLayout_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hl_cornerRadius="@dimen/dp_12"
+                            app:hl_leftShow="false"
+                            app:hl_rightShow="false"
+                            app:hl_shadowColor="@color/bg_color_shadow"
+                            app:hl_shadowLimit="@dimen/dp_10"
+                            app:hl_topShow="false">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_60"
+                                android:paddingLeft="@dimen/dp_20"
+                                android:paddingRight="@dimen/dp_20">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="我的邀请码"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="heavy" />
+
+                                <LinearLayout
+                                    android:id="@+id/mLinearLayout_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp_20"
+                                    android:background="@drawable/selector_text_color_address"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:id="@+id/mTextView_inviteCode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_24"
+                                        android:gravity="center"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/dp_7"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_12"
+                                        app:typeface="medium" />
+
+                                    <ImageView
+                                        android:layout_width="@dimen/dp_14"
+                                        android:layout_height="@dimen/dp_14"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="@dimen/dp_7"
+                                        android:src="@mipmap/copy" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </com.lihang.ShadowLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.lihang.ShadowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mShadowLayout_top_rewards"
+                            android:layout_marginTop="@dimen/dp_m_30"
+                            app:hl_cornerRadius="@dimen/dp_12"
+                            app:hl_leftShow="false"
+                            app:hl_rightShow="false"
+                            app:hl_shadowColor="@color/bg_color_shadow"
+                            app:hl_shadowLimit="@dimen/dp_10"
+                            app:hl_topShow="false">
+
+                            <LinearLayout
+                                android:id="@+id/mLinearLayout_btn_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/dp_20"
+                                android:paddingTop="@dimen/dp_40"
+                                android:paddingRight="@dimen/dp_20">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dp_20">
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="总邀请人数"
+                                        android:textColor="@color/text_bg_gray"
+                                        android:textSize="@dimen/sp_15"
+                                        app:typeface="regular" />
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:id="@+id/mTextView_totalNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text="0"
+                                        android:textColor="@color/text_bg_black"
+                                        android:textSize="@dimen/sp_15"
+                                        app:typeface="impact" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dp_20">
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="总奖励(XAS)"
+                                        android:textColor="@color/text_bg_gray"
+                                        android:textSize="@dimen/sp_15"
+                                        app:typeface="regular" />
+
+                                    <com.xw.aschwitkey.view.TypefaceTextView
+                                        android:id="@+id/mTextView_totalReward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text="0"
+                                        android:textColor="@color/text_color_golden"
+                                        android:textSize="@dimen/sp_15"
+                                        app:typeface="impact" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </com.lihang.ShadowLayout>
+
+                        <com.lihang.ShadowLayout
+                            android:id="@+id/mShadowLayout_top_rewards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            app:hl_cornerRadius="@dimen/dp_12"
+                            app:hl_leftShow="false"
+                            app:hl_rightShow="false"
+                            app:hl_shadowColor="@color/bg_color_shadow"
+                            app:hl_shadowLimit="@dimen/dp_10"
+                            app:hl_topShow="false">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_60"
+                                android:paddingLeft="@dimen/dp_20"
+                                android:paddingRight="@dimen/dp_20">
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="邀请分红"
+                                    android:textColor="@color/text_bg_black"
+                                    android:textSize="@dimen/sp_15"
+                                    app:typeface="heavy" />
+
+                                <com.xw.aschwitkey.view.TypefaceTextView
+                                    android:id="@+id/mTextView_inviteRewards"
+                                    android:layout_width="@dimen/dp_70"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/selector_btn_blue"
+                                    android:gravity="center"
+                                    android:text="查看明细"
+                                    android:textColor="@color/text_bg"
+                                    android:textSize="@dimen/sp_12"
+                                    app:typeface="medium" />
+
+                            </RelativeLayout>
+
+                        </com.lihang.ShadowLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.xw.aschwitkey.view.TypefaceTextView
+                    android:id="@+id/mTextView_rules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_red_radius"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginRight="@dimen/dp_13"
+                    android:padding="@dimen/dp_13"
+                    android:text="获取邀请分红规则：邀请好友注册并认购同支基金将额外获得邀请分红，所得邀请分红不超过本人认购基金所得分红的5倍。"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="visible"
+                    app:typeface="regular" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView_purchased"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:paddingLeft="@dimen/dp_13"
+                    android:paddingRight="@dimen/dp_13" />
+            </LinearLayout>
+        </com.xw.aschwitkey.view.StickyScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>
